@@ -3,7 +3,7 @@
 # Webcam enabled emotion recognition only demo using FER for RS2 Lecture Robots for Good.
 # https://github.com/justinshenk/fer/tree/master for fer information.
 ########### Instructions ##############
-# See Github for more: to fill in.....
+# See Github for more: https://github.com/Katie-Alice/RS2_Robots4Good.git
 # Make sure you are using versions stated in requirements.txt
 # Run Command: python scripts/emotion_demo_webcam.py
 # Webcam will open and emotions will be recognised. Press Q to quit the webcam feed.
