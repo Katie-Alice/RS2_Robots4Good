@@ -6,7 +6,7 @@ This project contains the demos for the Robotics Studio 2: Robots for Good Lectu
 The current demo uses:
   - python virtual environment
   - OpenCV for webcam access and display
-  - FER for facial emotion recognition
+  - FER Python package for facial emotion recognition
   - Tensorflow as the model backend
   
 The script opens the webcam, detects emotions from the user's face, and prints a simple hardcoded robot response based on the detected emotion.
