@@ -1,0 +1,7 @@
+# the pinned versions matter due to version compatibilities
+numpy<2
+setuptools<82
+tensorflow==2.16.1
+moviepy==1.0.3
+fer==22.5.1
+opencv-contrib-python==4.11.0.86
