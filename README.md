@@ -1,21 +1,23 @@
 # Robotics Studio 2: Robot for Good Demo
   
 ## Overview
-This project contains the demos for the Robotics Studio 2: Robots for Good Lecture. The first project is a simple web-cam based facial emotion recognition demo.  
+This project contains the demos for the Robotics Studio 2: Robots for Good Lecture. The first project is a simple web-cam based facial emotion recognition (ER) demo. The second project has a terminal simulator combined with the ER demo.
   
-The current demo uses:
+The current demos use:
   - python virtual environment
   - OpenCV for webcam access and display
   - FER Python package for facial emotion recognition
   - Tensorflow as the model backend
   
-The script opens the webcam, detects emotions from the user's face, and prints a simple hardcoded robot response based on the detected emotion.
-
-Acknowledgement: This project uses the Python Package FER from https://github.com/justinshenk/fer.git , this is a keras model pretrained with FER2013 by Pierre Luc Carrier and Aaron Courville. This package also builds upon the work from https://github.com/oarriaga/face_classification .
+The first project script opens the webcam, detects emotions from the user's face, and prints a simple hardcoded robot response based on the detected emotion.
+  
+The second project script allows you to move around a simulated environment trying to locate 'people', once near webcam can open, detects emotions from the user's face, and prints a simple hardcoded robot response based on the detected emotion, and the user can move around the environment again.
+  
+Acknowledgement: This project uses the Python Package FER from https://github.com/justinshenk/fer.git , this is a keras model pretrained with FER2013 by Pierre Luc Carrier and Aaron Courville. This package also builds upon the work from https://github.com/oarriaga/face_classification 
 
 ## Current Emotions Supported:
 - Angry
-- Disgust (hard to get)
+- Disgust
 - Fear
 - Happy
 - Sad
@@ -33,12 +35,16 @@ RS2_Robots4Good/
 ├── scripts/
 │   ├── test_imports.py
 │   └── emotion_demo_webcam.py
+│   └── emotion_demo.py
+│   └── sim_controller.py
 └── worlds/
 ```
 Notes: 
 - r4g_env is a python virtual environment, you create your own locally.
 - scripts/ contains the python demo scripts.
 - emotion_demo_webcam.py is a standalone version you can run directly, no simulation included.
+- emotion_demo.py is the same as the above but prints out some extra things, is used with below.
+- sim_controller.py is the version to run if you want the terminal simulator environment with the ER part.
 - worlds/ is for Gazebo world files.
   
 ## Setup Instructions:
@@ -70,8 +76,8 @@ python -m pip install --upgrade pip wheel
 python -m pip install -r requirements.txt
 ```
 
-## Run Instructions:
-For first time do all steps, otherwise skip to Step 3.
+## Run Instructions First Project:
+For first time do all steps, otherwise skip to Step 3 once the virtual environment is activated.
   
 ### 1. Activate the virtual environment
 If not already done.
@@ -113,6 +119,9 @@ The demo should:
 You can change the hardcoded responses from the robot in the code or add more as it will randomly choose 1 of the suitable options for the detected emotion.
   
 You can also switch to MTCNN as a face detector instead of OpenCV but this is untested at this time.
+  
+## Run Instructions Second Project:
+
 
 ## Troubleshooting
 #### Webcam does not open
@@ -124,7 +133,9 @@ Things that can help:
 - face the camera directly and be close enough
 - have a plain or non-busy background
 - hold the expression
-
+  
+Be aware that Disgust and Fear are hard to get for most people.
+  
 #### Virtual environment could not be created
 If you see an error about ensurepip or venv, install:
 ```
