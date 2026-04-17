@@ -1,4 +1,4 @@
-# Robotics Studio 2: Robot for Good Demo
+# Robots for Good Demo
   
 ## Overview
 This project contains the demos for the Robotics Studio 2: Robots for Good Lecture. The first part is a simple web-cam based facial emotion recognition (ER) demo. The second part has a terminal simulator combined with the ER demo.
@@ -27,7 +27,7 @@ Acknowledgement: This project uses the Python Package FER from https://github.co
   
 ## Project Structure:
 ```
-RS2_Robots4Good/
+Robots4Good/
 ├── r4g_env/ 
 ├── requirements.txt
 ├── LICENSE
@@ -63,7 +63,7 @@ git clone https://github.com/Katie-Alice/RS2_Robots4Good.git
      
 ### 3. Go to the project folder & create virtual environment
 ```
-cd ~/RS2_Robots4Good
+cd ~/Robots4Good
 python3 -m venv r4g_env #or any name you want instead
 # Activate
 source r4g_env/bin/activate
@@ -89,7 +89,7 @@ If not see troubleshooting below.
 ### 1. Activate the virtual environment
 If not already done.
 ```
-cd ~/RS2_Robots4Good
+cd ~/Robots4Good
 source r4g_env/bin/activate
 ```
   
@@ -123,7 +123,7 @@ You can also switch to MTCNN as a face detector instead of OpenCV but this is un
 ### 1. Activate the virtual environment
 If not already done.
 ```
-cd ~/RS2_Robots4Good
+cd ~/Robots4Good
 source r4g_env/bin/activate
 ```
 
